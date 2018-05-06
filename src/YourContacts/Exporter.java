@@ -1,11 +1,4 @@
 
- /* To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
- 
- 
- 
 package YourContacts;
 
 import java.io.DataOutputStream;
@@ -23,7 +16,7 @@ import jxl.write.WriteException;
 
 /**
  *
- * @author Tomek
+ * @author Tomasz Madej
  */
 public class Exporter {
     private File file;
@@ -40,7 +33,6 @@ public class Exporter {
             throw  new Exception ("Błąd");
             }
     }
-    
     
     public boolean export(){
         try{
@@ -64,7 +56,6 @@ public class Exporter {
                             s.addCell(new Label(i, j+1, String.valueOf(object)));
                         }
                     } 
-                
             }
         w.write();
         w.close();
@@ -74,8 +65,6 @@ public class Exporter {
         catch(IOException | WriteException e){
             return false;
         }
-      
     }
-          
-    
+
 }
